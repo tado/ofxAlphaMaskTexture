@@ -17,9 +17,9 @@ void ofApp::setup(){
     
     bottomImg.loadImage("space.jpg");
     
-    alphaMask = new ofxAlphaMaskTexture(cam.getTextureReference(),        // top layer texture
-                                        bottomImg.getTextureReference(),  // bottom layer texture
-                                        fbo.getTextureReference());   // mask layer texture
+    alphaMask = new ofxAlphaMaskTexture(cam.getTextureReference(),       // top layer texture
+                                        bottomImg.getTextureReference(), // bottom layer texture
+                                        fbo.getTextureReference());      // mask layer texture
 }
 
 //--------------------------------------------------------------
