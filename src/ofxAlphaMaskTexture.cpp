@@ -6,14 +6,9 @@ ofxAlphaMaskTexture::ofxAlphaMaskTexture(ofTexture _topLayer, ofTexture _bottomL
     height = ofGetHeight();
     
     topLayer = _topLayer;
-    //topLayer.resize(width, height);
-    
     bottomLayer = _bottomLayer;
-    //bottomLayer->resize(width, height);
-
     maskLayer = _maskLayer;
-    //maskLayer->resize(width, height);
-
+    
     maskShader.begin();
     maskShader.setUniformTexture("Tex0", topLayer, 0);
     maskShader.setUniformTexture("Tex1", maskLayer, 1);
@@ -22,6 +17,7 @@ ofxAlphaMaskTexture::ofxAlphaMaskTexture(ofTexture _topLayer, ofTexture _bottomL
 
 void ofxAlphaMaskTexture::update(){
     maskShader.setUniformTexture("Tex0", topLayer, 0);
+    maskShader.setUniformTexture("Tex1", maskLayer, 1);
 }
 
 void ofxAlphaMaskTexture::draw(){
