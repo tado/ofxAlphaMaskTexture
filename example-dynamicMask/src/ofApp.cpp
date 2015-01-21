@@ -11,7 +11,7 @@ void ofApp::setup(){
     
     for (int i = 0; i < NUM; i++) {
         location[i] = ofVec2f(ofRandom(ofGetWidth()), ofRandom(ofGetHeight()));
-        velocity[i] = ofVec2f(ofRandom(-2, 2), ofRandom(-2, 2));
+        velocity[i] = ofVec2f(ofRandom(-5, 5), ofRandom(-5, 5));
         radius[i] = ofRandom(2, 50);
     }
     
