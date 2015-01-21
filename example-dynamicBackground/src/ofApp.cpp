@@ -8,20 +8,19 @@ void ofApp::setup(){
     
     cam.initGrabber(ofGetWidth(), ofGetHeight());
     bgFbo.allocate(ofGetWidth(), ofGetHeight());
-    maskFbo.allocate(ofGetWidth(), ofGetHeight());
+
+    maskImg.loadImage("mask.jpg");
     
     for (int i = 0; i < NUM; i++) {
         location[i] = ofVec2f(ofRandom(ofGetWidth()), ofRandom(ofGetHeight()));
         velocity[i] = ofVec2f(ofRandom(-5, 5), ofRandom(-5, 5));
-        radius[i] = ofRandom(20, 240);
+        radius[i] = ofRandom(20, 180);
         color[i].setHsb(ofRandom(255), 255, 255, 100);
     }
     
-    bottomImg.loadImage("space.jpg");
-    
     alphaMask = new ofxAlphaMaskTexture(cam.getTextureReference(),      // top layer texture
                                         bgFbo.getTextureReference(),    // bottom layer texture
-                                        maskFbo.getTextureReference()); // mask layer texture
+                                        maskImg.getTextureReference()); // mask layer texture
 }
 
 //--------------------------------------------------------------
@@ -37,9 +36,8 @@ void ofApp::update(){
 void ofApp::draw(){
     bgFbo.begin();
     {
-        ofEnableBlendMode(OF_BLENDMODE_ALPHA);
         ofClear(0);
-
+        ofPushStyle();
         ofEnableBlendMode(OF_BLENDMODE_ADD);
         for (int i = 0; i < NUM; i++) {
             location[i] += velocity[i];
@@ -52,18 +50,9 @@ void ofApp::draw(){
                 velocity[i].y *= -1;
             }
         }
+        ofPopStyle();
     }
     bgFbo.end();
-    
-    maskFbo.begin();
-    {
-        ofEnableBlendMode(OF_BLENDMODE_ALPHA);
-        ofClear(0);
-        ofSetColor(255);
-        float radius = sin(ofGetElapsedTimef() * 4.0) * ofGetWidth() / 8.0 + (ofGetWidth() / 4.0);
-        ofCircle(ofGetWidth()/2, ofGetHeight()/2, radius);
-    }
-    maskFbo.end();
 
     ofSetColor(255);
     alphaMask->draw();

@@ -21,12 +21,12 @@ public:
     void gotMessage(ofMessage msg);
     
     ofxAlphaMaskTexture *alphaMask;
-    ofImage bottomImg;
+    ofImage maskImg;
     ofFbo bgFbo;
-    ofFbo maskFbo;
+
     
     ofVideoGrabber cam;
-    static const int NUM = 50;
+    static const int NUM = 100;
     ofVec2f velocity[NUM];
     ofVec2f location[NUM];
     float radius[NUM];
