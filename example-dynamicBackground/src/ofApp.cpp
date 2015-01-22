@@ -54,7 +54,6 @@ void ofApp::draw(){
     }
     bgFbo.end();
 
-    ofSetColor(255);
     alphaMask->draw();
 }
 

@@ -28,7 +28,7 @@ void ofApp::update(){
     if (cam.isFrameNew()) {
         alphaMask->update();
     }
-    ofSetWindowTitle("frame rate = " + ofToString(ofGetFrameRate(), 2) + "fps");
+    ofSetWindowTitle("framerate = " + ofToString(ofGetFrameRate(), 2) + "fps");
 }
 
 //--------------------------------------------------------------
@@ -36,7 +36,6 @@ void ofApp::draw(){
     fbo.begin();
     {
         ofClear(0);
-        ofSetColor(255);
         for (int i = 0; i < NUM; i++) {
             location[i] += velocity[i];
             ofCircle(location[i], radius[i]);
@@ -50,7 +49,6 @@ void ofApp::draw(){
     }
     fbo.end();
 
-    ofSetColor(255);
     alphaMask->draw();
 }
 

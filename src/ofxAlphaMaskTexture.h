@@ -4,7 +4,6 @@
 class ofxAlphaMaskTexture {
 public:
     ofxAlphaMaskTexture(ofTexture topLayer, ofTexture bottomLayer, ofTexture maskLayer);
-    void updateTopTexture(ofTexture topTexture);
     void update();
     void draw();
     
