@@ -28,6 +28,8 @@ ofxAlphaMaskTexture::ofxAlphaMaskTexture(ofTexture _topLayer, ofTexture _bottomL
         maskShader.setupShaderFromSource(GL_VERTEX_SHADER, vert);
     }
     
+    maskShader.linkProgram();
+    
     width = ofGetWidth();
     height = ofGetHeight();
     
