@@ -7,8 +7,6 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
-		4CAB24C543B7F926260DE13B /* composite.frag in Sources */ = {isa = PBXBuildFile; fileRef = AA7DDDB97FF9F893AC865B6B /* composite.frag */; };
-		7865B35EF0684F131B5C89B1 /* composite.vert in Sources */ = {isa = PBXBuildFile; fileRef = 2DF30319029BCE82657A6C39 /* composite.vert */; };
 		7E6EED678267062B686EAC83 /* ofxAlphaMaskTexture.cpp in Sources */ = {isa = PBXBuildFile; fileRef = C7750426F4EC4696732ED8A4 /* ofxAlphaMaskTexture.cpp */; };
 		BBAB23CB13894F3D00AA2426 /* GLUT.framework in CopyFiles */ = {isa = PBXBuildFile; fileRef = BBAB23BE13894E4700AA2426 /* GLUT.framework */; };
 		E4328149138ABC9F0047C5CB /* openFrameworksDebug.a in Frameworks */ = {isa = PBXBuildFile; fileRef = E4328148138ABC890047C5CB /* openFrameworksDebug.a */; };
@@ -62,8 +60,6 @@
 /* End PBXCopyFilesBuildPhase section */
 
 /* Begin PBXFileReference section */
-		2DF30319029BCE82657A6C39 /* composite.vert */ = {isa = PBXFileReference; explicitFileType = file; fileEncoding = 30; name = composite.vert; path = ../src/shader/composite.vert; sourceTree = SOURCE_ROOT; };
-		AA7DDDB97FF9F893AC865B6B /* composite.frag */ = {isa = PBXFileReference; explicitFileType = file; fileEncoding = 30; name = composite.frag; path = ../src/shader/composite.frag; sourceTree = SOURCE_ROOT; };
 		BBAB23BE13894E4700AA2426 /* GLUT.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = GLUT.framework; path = ../../../libs/glut/lib/osx/GLUT.framework; sourceTree = "<group>"; };
 		C7750426F4EC4696732ED8A4 /* ofxAlphaMaskTexture.cpp */ = {isa = PBXFileReference; explicitFileType = sourcecode.cpp.cpp; fileEncoding = 30; name = ofxAlphaMaskTexture.cpp; path = ../src/ofxAlphaMaskTexture.cpp; sourceTree = SOURCE_ROOT; };
 		C88E4D95A10206F475DBD1A7 /* ofxAlphaMaskTexture.h */ = {isa = PBXFileReference; explicitFileType = sourcecode.c.h; fileEncoding = 30; name = ofxAlphaMaskTexture.h; path = ../src/ofxAlphaMaskTexture.h; sourceTree = SOURCE_ROOT; };
@@ -76,7 +72,7 @@
 		E45BE9770E8CC7DD009D7055 /* CoreServices.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = CoreServices.framework; path = /System/Library/Frameworks/CoreServices.framework; sourceTree = "<absolute>"; };
 		E45BE9790E8CC7DD009D7055 /* OpenGL.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = OpenGL.framework; path = /System/Library/Frameworks/OpenGL.framework; sourceTree = "<absolute>"; };
 		E45BE97A0E8CC7DD009D7055 /* QuickTime.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = QuickTime.framework; path = /System/Library/Frameworks/QuickTime.framework; sourceTree = "<absolute>"; };
-		E4B69B5B0A3A1756003C02F2 /* example-dynamicMaskDebug.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; name = "example-dynamicMaskDebug.app"; path = "example-dynamicBackgroundDebug.app"; sourceTree = BUILT_PRODUCTS_DIR; };
+		E4B69B5B0A3A1756003C02F2 /* example-dynamicBackgroundDebug.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = "example-dynamicBackgroundDebug.app"; sourceTree = BUILT_PRODUCTS_DIR; };
 		E4B69E1D0A3A1BDC003C02F2 /* main.cpp */ = {isa = PBXFileReference; fileEncoding = 30; lastKnownFileType = sourcecode.cpp.cpp; name = main.cpp; path = src/main.cpp; sourceTree = SOURCE_ROOT; };
 		E4B69E1E0A3A1BDC003C02F2 /* ofApp.cpp */ = {isa = PBXFileReference; explicitFileType = sourcecode.cpp.cpp; fileEncoding = 30; name = ofApp.cpp; path = src/ofApp.cpp; sourceTree = SOURCE_ROOT; };
 		E4B69E1F0A3A1BDC003C02F2 /* ofApp.h */ = {isa = PBXFileReference; fileEncoding = 30; lastKnownFileType = sourcecode.c.h; name = ofApp.h; path = src/ofApp.h; sourceTree = SOURCE_ROOT; };
@@ -163,15 +159,6 @@
 			name = "3rd party frameworks";
 			sourceTree = "<group>";
 		};
-		CF0C90DA2326B6014A30A8BA /* shader */ = {
-			isa = PBXGroup;
-			children = (
-				AA7DDDB97FF9F893AC865B6B /* composite.frag */,
-				2DF30319029BCE82657A6C39 /* composite.vert */,
-			);
-			name = shader;
-			sourceTree = "<group>";
-		};
 		E4328144138ABC890047C5CB /* Products */ = {
 			isa = PBXGroup;
 			children = (
@@ -198,7 +185,7 @@
 				E4EEC9E9138DF44700A80321 /* openFrameworks */,
 				BB4B014C10F69532006C3DED /* addons */,
 				E45BE5980E8CC70C009D7055 /* frameworks */,
-				E4B69B5B0A3A1756003C02F2 /* example-dynamicMaskDebug.app */,
+				E4B69B5B0A3A1756003C02F2 /* example-dynamicBackgroundDebug.app */,
 			);
 			sourceTree = "<group>";
 		};
@@ -226,7 +213,6 @@
 			children = (
 				C7750426F4EC4696732ED8A4 /* ofxAlphaMaskTexture.cpp */,
 				C88E4D95A10206F475DBD1A7 /* ofxAlphaMaskTexture.h */,
-				CF0C90DA2326B6014A30A8BA /* shader */,
 			);
 			name = src;
 			sourceTree = "<group>";
@@ -250,7 +236,7 @@
 			);
 			name = "example-dynamicBackground";
 			productName = myOFApp;
-			productReference = E4B69B5B0A3A1756003C02F2 /* example-dynamicMaskDebug.app */;
+			productReference = E4B69B5B0A3A1756003C02F2 /* example-dynamicBackgroundDebug.app */;
 			productType = "com.apple.product-type.application";
 		};
 /* End PBXNativeTarget section */
@@ -321,8 +307,6 @@
 				E4B69E200A3A1BDC003C02F2 /* main.cpp in Sources */,
 				E4B69E210A3A1BDC003C02F2 /* ofApp.cpp in Sources */,
 				7E6EED678267062B686EAC83 /* ofxAlphaMaskTexture.cpp in Sources */,
-				4CAB24C543B7F926260DE13B /* composite.frag in Sources */,
-				7865B35EF0684F131B5C89B1 /* composite.vert in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
