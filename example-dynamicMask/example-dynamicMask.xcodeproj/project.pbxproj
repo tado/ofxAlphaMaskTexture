@@ -62,6 +62,7 @@
 /* End PBXCopyFilesBuildPhase section */
 
 /* Begin PBXFileReference section */
+		1838067D1A71E56D00AB0E5F /* example-dynamicMaskDebug.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = "example-dynamicMaskDebug.app"; sourceTree = BUILT_PRODUCTS_DIR; };
 		2DF30319029BCE82657A6C39 /* composite.vert */ = {isa = PBXFileReference; explicitFileType = file; fileEncoding = 30; name = composite.vert; path = ../src/shader/composite.vert; sourceTree = SOURCE_ROOT; };
 		AA7DDDB97FF9F893AC865B6B /* composite.frag */ = {isa = PBXFileReference; explicitFileType = file; fileEncoding = 30; name = composite.frag; path = ../src/shader/composite.frag; sourceTree = SOURCE_ROOT; };
 		BBAB23BE13894E4700AA2426 /* GLUT.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = GLUT.framework; path = ../../../libs/glut/lib/osx/GLUT.framework; sourceTree = "<group>"; };
@@ -76,7 +77,6 @@
 		E45BE9770E8CC7DD009D7055 /* CoreServices.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = CoreServices.framework; path = /System/Library/Frameworks/CoreServices.framework; sourceTree = "<absolute>"; };
 		E45BE9790E8CC7DD009D7055 /* OpenGL.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = OpenGL.framework; path = /System/Library/Frameworks/OpenGL.framework; sourceTree = "<absolute>"; };
 		E45BE97A0E8CC7DD009D7055 /* QuickTime.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = QuickTime.framework; path = /System/Library/Frameworks/QuickTime.framework; sourceTree = "<absolute>"; };
-		E4B69B5B0A3A1756003C02F2 /* example-dynamicMask.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; name = "example-dynamicMask.app"; path = "/Users/tado/Documents/of_v0.8.4_osx_release/addons/ofxAlphaMaskTexture/example-dynamicMask/bin/example-dynamicMask.app"; sourceTree = "<absolute>"; };
 		E4B69E1D0A3A1BDC003C02F2 /* main.cpp */ = {isa = PBXFileReference; fileEncoding = 30; lastKnownFileType = sourcecode.cpp.cpp; name = main.cpp; path = src/main.cpp; sourceTree = SOURCE_ROOT; };
 		E4B69E1E0A3A1BDC003C02F2 /* ofApp.cpp */ = {isa = PBXFileReference; explicitFileType = sourcecode.cpp.cpp; fileEncoding = 30; name = ofApp.cpp; path = src/ofApp.cpp; sourceTree = SOURCE_ROOT; };
 		E4B69E1F0A3A1BDC003C02F2 /* ofApp.h */ = {isa = PBXFileReference; fileEncoding = 30; lastKnownFileType = sourcecode.c.h; name = ofApp.h; path = src/ofApp.h; sourceTree = SOURCE_ROOT; };
@@ -198,6 +198,7 @@
 				E4EEC9E9138DF44700A80321 /* openFrameworks */,
 				BB4B014C10F69532006C3DED /* addons */,
 				E45BE5980E8CC70C009D7055 /* frameworks */,
+				1838067D1A71E56D00AB0E5F /* example-dynamicMaskDebug.app */,
 			);
 			sourceTree = "<group>";
 		};
@@ -249,7 +250,7 @@
 			);
 			name = "example-dynamicMask";
 			productName = myOFApp;
-			productReference = E4B69B5B0A3A1756003C02F2 /* example-dynamicMask.app */;
+			productReference = 1838067D1A71E56D00AB0E5F /* example-dynamicMaskDebug.app */;
 			productType = "com.apple.product-type.application";
 		};
 /* End PBXNativeTarget section */
