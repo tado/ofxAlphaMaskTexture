@@ -1,4 +1,6 @@
 #pragma once
+#define STRINGIFY(A) #A
+
 #include "ofMain.h"
 
 class ofxAlphaMaskTexture {
@@ -7,6 +9,8 @@ public:
     void update();
     void draw();
     
+    string frag;
+    string vert;
     ofShader maskShader;
     
     ofTexture maskLayer;
