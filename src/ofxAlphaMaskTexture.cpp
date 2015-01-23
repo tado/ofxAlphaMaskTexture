@@ -2,24 +2,26 @@
 
 ofxAlphaMaskTexture::ofxAlphaMaskTexture(ofTexture _topLayer, ofTexture _bottomLayer, ofTexture _maskLayer){
     
-    frag = STRINGIFY(
-                     uniform sampler2DRect Tex0;
-                     uniform sampler2DRect Tex1;
-                     
-                     void main (void){
-                         vec4 image = texture2DRect(Tex0, gl_TexCoord[0].st);
-                         vec4 composite = texture2DRect(Tex1, gl_TexCoord[1].st);
-                         gl_FragData[0] = vec4(image.rgb,composite.r);
-                     }
-                     );
+    frag = STRINGIFY
+    (
+     uniform sampler2DRect Tex0;
+     uniform sampler2DRect Tex1;
+     
+     void main (void){
+         vec4 image = texture2DRect(Tex0, gl_TexCoord[0].st);
+         vec4 composite = texture2DRect(Tex1, gl_TexCoord[1].st);
+         gl_FragData[0] = vec4(image.rgb,composite.r);
+     }
+     );
     
-    vert = STRINGIFY(
-                     void main(void){
-                         gl_Position = ftransform();
-                         gl_TexCoord[0] = gl_MultiTexCoord0;
-                         gl_TexCoord[1] = gl_MultiTexCoord1;
-                     }
-                     );
+    vert = STRINGIFY
+    (
+     void main(void){
+         gl_Position = ftransform();
+         gl_TexCoord[0] = gl_MultiTexCoord0;
+         gl_TexCoord[1] = gl_MultiTexCoord1;
+     }
+     );
     
     if (frag.empty() == false) {
         maskShader.setupShaderFromSource(GL_FRAGMENT_SHADER, frag);
