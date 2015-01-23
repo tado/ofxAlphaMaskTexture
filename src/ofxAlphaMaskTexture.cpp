@@ -45,11 +45,6 @@ ofxAlphaMaskTexture::ofxAlphaMaskTexture(ofTexture _topLayer, ofTexture _bottomL
     maskShader.end();
 }
 
-void ofxAlphaMaskTexture::update(){
-    maskShader.setUniformTexture("Tex0", topLayer, 0);
-    maskShader.setUniformTexture("Tex1", maskLayer, 1);
-}
-
 void ofxAlphaMaskTexture::draw(){
     bottomLayer.draw(0, 0, width, height);
     

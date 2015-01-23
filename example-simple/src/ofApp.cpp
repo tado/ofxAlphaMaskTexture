@@ -17,9 +17,6 @@ void ofApp::setup(){
 //--------------------------------------------------------------
 void ofApp::update(){
     cam.update();
-    if (cam.isFrameNew()) {
-        alphaMask->update();
-    }
     ofSetWindowTitle("frame rate = " + ofToString(ofGetFrameRate(), 2) + "fps");
 }
 

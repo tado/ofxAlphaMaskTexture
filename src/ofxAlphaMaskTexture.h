@@ -6,7 +6,6 @@
 class ofxAlphaMaskTexture {
 public:
     ofxAlphaMaskTexture(ofTexture topLayer, ofTexture bottomLayer, ofTexture maskLayer);
-    void update();
     void draw();
     
     string frag;
