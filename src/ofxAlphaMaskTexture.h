@@ -22,4 +22,5 @@ public:
     
     int width;
     int height;
+    float maskScale;
 };

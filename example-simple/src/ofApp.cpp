@@ -12,6 +12,8 @@ void ofApp::setup(){
     alphaMask = new ofxAlphaMaskTexture(cam.getTexture(),        // top layer texture
                                         bottomImg.getTexture(),  // bottom layer texture
                                         maskImg.getTexture());   // mask layer texture
+    
+    alphaMask->maskScale = 1.2; //Mask Layer Scale (default = 1.0);
 }
 
 //--------------------------------------------------------------
