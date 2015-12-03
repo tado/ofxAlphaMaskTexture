@@ -77,9 +77,6 @@ ofxAlphaMaskTexture::ofxAlphaMaskTexture(ofTexture _topLayer, ofTexture _bottomL
     ofClear(0,0,0,255);
     fbo.end();
 }
-void ofxAlphaMaskTexture::update(){
-
-}
 
 void ofxAlphaMaskTexture::draw(){
     maskFbo.begin();
