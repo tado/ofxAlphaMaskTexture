@@ -1,1 +1,1 @@
-ofxAlphaMask2
+ofxAlphaMaskTexture

@@ -6,18 +6,19 @@ void ofApp::setup(){
     
     cam.initGrabber(ofGetWidth(), ofGetHeight());
     
-    bottomImg.loadImage("space.jpg");
-    maskImg.loadImage("mask.jpg");
+    bottomImg.load("space.jpg");
+    maskImg.load("mask.jpg");
     
-    alphaMask = new ofxAlphaMaskTexture(cam.getTextureReference(),        // top layer texture
-                                        bottomImg.getTextureReference(),  // bottom layer texture
-                                        maskImg.getTextureReference());   // mask layer texture
+    alphaMask = new ofxAlphaMaskTexture(cam.getTexture(),        // top layer texture
+                                        bottomImg.getTexture(),  // bottom layer texture
+                                        maskImg.getTexture());   // mask layer texture
 }
 
 //--------------------------------------------------------------
 void ofApp::update(){
     cam.update();
     ofSetWindowTitle("frame rate = " + ofToString(ofGetFrameRate(), 2) + "fps");
+    alphaMask->update();
 }
 
 //--------------------------------------------------------------

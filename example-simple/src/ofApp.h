@@ -24,6 +24,5 @@ public:
 
     ofImage maskImg;
     ofImage bottomImg;
-    
     ofVideoGrabber cam;
 };
