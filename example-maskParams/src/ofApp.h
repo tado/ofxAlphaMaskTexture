@@ -29,5 +29,6 @@ public:
     ofVideoGrabber cam;
     
     ofxFloatSlider maskAlpha;
+    ofxFloatSlider maskScale;
     ofxPanel gui;
 };

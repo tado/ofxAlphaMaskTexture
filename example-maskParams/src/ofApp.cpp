@@ -14,14 +14,17 @@ void ofApp::setup(){
                                         maskImg.getTexture());  // mask layer texture
     
     gui.setup();
-    gui.add(maskAlpha.setup("Mask Alpha", 0.5, 0.0, 1.0));      // set mask alpha
+    gui.add(maskAlpha.setup("Mask Alpha", 1.0, 0.0, 1.0));      // set mask alpha
+    gui.add(maskScale.setup("Mask Scale", 1.0, 0.0, 3.0));      // set mask scale
 }
 
 //--------------------------------------------------------------
 void ofApp::update(){
     cam.update();
-    ofSetWindowTitle("frame rate = " + ofToString(ofGetFrameRate(), 2) + "fps");
+    alphaMask->maskScale = maskScale;
     alphaMask->maskAlpha = maskAlpha;
+
+    ofSetWindowTitle("frame rate = " + ofToString(ofGetFrameRate(), 2) + "fps");
 }
 
 //--------------------------------------------------------------

@@ -1,2 +1,0 @@
-ofxAlphaMaskTexture
-ofxGui
