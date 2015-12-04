@@ -2,6 +2,7 @@
 
 ofxAlphaMaskTexture::ofxAlphaMaskTexture(ofTexture _topLayer, ofTexture _bottomLayer, ofTexture _maskLayer){
     maskScale = 1.0;
+    maskAlpha = 1.0;
     
     if(ofIsGLProgrammableRenderer()){
         string vertex = "#version 150\n\
@@ -81,7 +82,7 @@ ofxAlphaMaskTexture::ofxAlphaMaskTexture(ofTexture _topLayer, ofTexture _bottomL
 void ofxAlphaMaskTexture::draw(){
     maskFbo.begin();
     ofClear(0,0,0,255);
-    ofSetColor(255,255);
+    ofSetColor(255,maskAlpha * 255);
     float left = (width - (width * maskScale)) / 2.0;
     float top = (height - (height * maskScale)) / 2.0;
     maskLayer.draw(left, top, width * maskScale, height * maskScale);
