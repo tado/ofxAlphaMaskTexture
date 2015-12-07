@@ -7,6 +7,7 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		187FC4471C152EEF00FE1079 /* ofxBlurShader.cpp in Sources */ = {isa = PBXBuildFile; fileRef = 187FC4451C152EEF00FE1079 /* ofxBlurShader.cpp */; };
 		7E6EED678267062B686EAC83 /* ofxAlphaMaskTexture.cpp in Sources */ = {isa = PBXBuildFile; fileRef = C7750426F4EC4696732ED8A4 /* ofxAlphaMaskTexture.cpp */; };
 		E4328149138ABC9F0047C5CB /* openFrameworksDebug.a in Frameworks */ = {isa = PBXBuildFile; fileRef = E4328148138ABC890047C5CB /* openFrameworksDebug.a */; };
 		E4B69E200A3A1BDC003C02F2 /* main.cpp in Sources */ = {isa = PBXBuildFile; fileRef = E4B69E1D0A3A1BDC003C02F2 /* main.cpp */; };
@@ -43,10 +44,12 @@
 /* End PBXCopyFilesBuildPhase section */
 
 /* Begin PBXFileReference section */
+		187FC4451C152EEF00FE1079 /* ofxBlurShader.cpp */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.cpp; name = ofxBlurShader.cpp; path = src/ofxBlurShader/ofxBlurShader.cpp; sourceTree = SOURCE_ROOT; };
+		187FC4461C152EEF00FE1079 /* ofxBlurShader.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = ofxBlurShader.h; path = src/ofxBlurShader/ofxBlurShader.h; sourceTree = SOURCE_ROOT; };
 		C7750426F4EC4696732ED8A4 /* ofxAlphaMaskTexture.cpp */ = {isa = PBXFileReference; explicitFileType = sourcecode.cpp.cpp; fileEncoding = 30; name = ofxAlphaMaskTexture.cpp; path = ../../../addons/ofxAlphaMaskTexture/src/ofxAlphaMaskTexture.cpp; sourceTree = SOURCE_ROOT; };
 		C88E4D95A10206F475DBD1A7 /* ofxAlphaMaskTexture.h */ = {isa = PBXFileReference; explicitFileType = sourcecode.c.h; fileEncoding = 30; name = ofxAlphaMaskTexture.h; path = ../../../addons/ofxAlphaMaskTexture/src/ofxAlphaMaskTexture.h; sourceTree = SOURCE_ROOT; };
 		E4328143138ABC890047C5CB /* openFrameworksLib.xcodeproj */ = {isa = PBXFileReference; lastKnownFileType = "wrapper.pb-project"; name = openFrameworksLib.xcodeproj; path = ../../../libs/openFrameworksCompiled/project/osx/openFrameworksLib.xcodeproj; sourceTree = SOURCE_ROOT; };
-		E4B69B5B0A3A1756003C02F2 /* example-simpleDebug.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = "example-simpleDebug.app"; sourceTree = BUILT_PRODUCTS_DIR; };
+		E4B69B5B0A3A1756003C02F2 /* example-blurDebug.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = "example-blurDebug.app"; sourceTree = BUILT_PRODUCTS_DIR; };
 		E4B69E1D0A3A1BDC003C02F2 /* main.cpp */ = {isa = PBXFileReference; fileEncoding = 30; lastKnownFileType = sourcecode.cpp.cpp; name = main.cpp; path = src/main.cpp; sourceTree = SOURCE_ROOT; };
 		E4B69E1E0A3A1BDC003C02F2 /* ofApp.cpp */ = {isa = PBXFileReference; explicitFileType = sourcecode.cpp.cpp; fileEncoding = 30; name = ofApp.cpp; path = src/ofApp.cpp; sourceTree = SOURCE_ROOT; };
 		E4B69E1F0A3A1BDC003C02F2 /* ofApp.h */ = {isa = PBXFileReference; fileEncoding = 30; lastKnownFileType = sourcecode.c.h; name = ofApp.h; path = src/ofApp.h; sourceTree = SOURCE_ROOT; };
@@ -67,6 +70,24 @@
 /* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
+		1861124D1C152ABF0090AF49 /* ofxBlurShader */ = {
+			isa = PBXGroup;
+			children = (
+				1861124F1C152ABF0090AF49 /* src */,
+			);
+			name = ofxBlurShader;
+			path = src/ofxBlurShader;
+			sourceTree = "<group>";
+		};
+		1861124F1C152ABF0090AF49 /* src */ = {
+			isa = PBXGroup;
+			children = (
+				187FC4451C152EEF00FE1079 /* ofxBlurShader.cpp */,
+				187FC4461C152EEF00FE1079 /* ofxBlurShader.h */,
+			);
+			path = src;
+			sourceTree = "<group>";
+		};
 		6948EE371B920CB800B5AC1A /* local_addons */ = {
 			isa = PBXGroup;
 			children = (
@@ -86,6 +107,7 @@
 			isa = PBXGroup;
 			children = (
 				971D56683A7EFF71B133A16A /* ofxAlphaMaskTexture */,
+				1861124D1C152ABF0090AF49 /* ofxBlurShader */,
 			);
 			name = addons;
 			sourceTree = "<group>";
@@ -107,7 +129,7 @@
 				E4EEC9E9138DF44700A80321 /* openFrameworks */,
 				BB4B014C10F69532006C3DED /* addons */,
 				6948EE371B920CB800B5AC1A /* local_addons */,
-				E4B69B5B0A3A1756003C02F2 /* example-simpleDebug.app */,
+				E4B69B5B0A3A1756003C02F2 /* example-blurDebug.app */,
 			);
 			sourceTree = "<group>";
 		};
@@ -142,9 +164,9 @@
 /* End PBXGroup section */
 
 /* Begin PBXNativeTarget section */
-		E4B69B5A0A3A1756003C02F2 /* example-simple */ = {
+		E4B69B5A0A3A1756003C02F2 /* example-blur */ = {
 			isa = PBXNativeTarget;
-			buildConfigurationList = E4B69B5F0A3A1757003C02F2 /* Build configuration list for PBXNativeTarget "example-simple" */;
+			buildConfigurationList = E4B69B5F0A3A1757003C02F2 /* Build configuration list for PBXNativeTarget "example-blur" */;
 			buildPhases = (
 				E4B69B580A3A1756003C02F2 /* Sources */,
 				E4B69B590A3A1756003C02F2 /* Frameworks */,
@@ -156,9 +178,9 @@
 			dependencies = (
 				E4EEB9AC138B136A00A80321 /* PBXTargetDependency */,
 			);
-			name = "example-simple";
+			name = "example-blur";
 			productName = myOFApp;
-			productReference = E4B69B5B0A3A1756003C02F2 /* example-simpleDebug.app */;
+			productReference = E4B69B5B0A3A1756003C02F2 /* example-blurDebug.app */;
 			productType = "com.apple.product-type.application";
 		};
 /* End PBXNativeTarget section */
@@ -169,7 +191,7 @@
 			attributes = {
 				LastUpgradeCheck = 0600;
 			};
-			buildConfigurationList = E4B69B4D0A3A1720003C02F2 /* Build configuration list for PBXProject "example-simple" */;
+			buildConfigurationList = E4B69B4D0A3A1720003C02F2 /* Build configuration list for PBXProject "example-blur" */;
 			compatibilityVersion = "Xcode 3.2";
 			developmentRegion = English;
 			hasScannedForEncodings = 0;
@@ -190,7 +212,7 @@
 			);
 			projectRoot = "";
 			targets = (
-				E4B69B5A0A3A1756003C02F2 /* example-simple */,
+				E4B69B5A0A3A1756003C02F2 /* example-blur */,
 			);
 		};
 /* End PBXProject section */
@@ -229,6 +251,7 @@
 				E4B69E200A3A1BDC003C02F2 /* main.cpp in Sources */,
 				E4B69E210A3A1BDC003C02F2 /* ofApp.cpp in Sources */,
 				7E6EED678267062B686EAC83 /* ofxAlphaMaskTexture.cpp in Sources */,
+				187FC4471C152EEF00FE1079 /* ofxBlurShader.cpp in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -264,7 +287,6 @@
 				GCC_WARN_UNUSED_VARIABLE = NO;
 				HEADER_SEARCH_PATHS = (
 					"$(OF_CORE_HEADERS)",
-					src,
 					../../../addons/ofxAlphaMaskTexture/src,
 				);
 				MACOSX_DEPLOYMENT_TARGET = 10.8;
@@ -299,7 +321,6 @@
 				GCC_WARN_UNUSED_VARIABLE = NO;
 				HEADER_SEARCH_PATHS = (
 					"$(OF_CORE_HEADERS)",
-					src,
 					../../../addons/ofxAlphaMaskTexture/src,
 				);
 				MACOSX_DEPLOYMENT_TARGET = 10.8;
@@ -327,7 +348,6 @@
 				GCC_MODEL_TUNING = NONE;
 				HEADER_SEARCH_PATHS = (
 					"$(OF_CORE_HEADERS)",
-					src,
 					../../../addons/ofxAlphaMaskTexture/src,
 				);
 				ICON = "$(ICON_NAME_DEBUG)";
@@ -355,7 +375,6 @@
 				GCC_MODEL_TUNING = NONE;
 				HEADER_SEARCH_PATHS = (
 					"$(OF_CORE_HEADERS)",
-					src,
 					../../../addons/ofxAlphaMaskTexture/src,
 				);
 				ICON = "$(ICON_NAME_RELEASE)";
@@ -372,7 +391,7 @@
 /* End XCBuildConfiguration section */
 
 /* Begin XCConfigurationList section */
-		E4B69B4D0A3A1720003C02F2 /* Build configuration list for PBXProject "example-simple" */ = {
+		E4B69B4D0A3A1720003C02F2 /* Build configuration list for PBXProject "example-blur" */ = {
 			isa = XCConfigurationList;
 			buildConfigurations = (
 				E4B69B4E0A3A1720003C02F2 /* Debug */,
@@ -381,7 +400,7 @@
 			defaultConfigurationIsVisible = 0;
 			defaultConfigurationName = Release;
 		};
-		E4B69B5F0A3A1757003C02F2 /* Build configuration list for PBXNativeTarget "example-simple" */ = {
+		E4B69B5F0A3A1757003C02F2 /* Build configuration list for PBXNativeTarget "example-blur" */ = {
 			isa = XCConfigurationList;
 			buildConfigurations = (
 				E4B69B600A3A1757003C02F2 /* Debug */,
